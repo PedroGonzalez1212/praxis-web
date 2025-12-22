@@ -1,0 +1,308 @@
+/* ===============================
+   PERSONAS EN EL COLECTIVO
+   =============================== */
+
+.colectivo {
+  padding: 84px 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.colectivo .container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.colectivo-head {
+  margin-bottom: 28px;
+}
+
+.colectivo-head h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(28px, 3.2vw, 40px);
+  margin: 0 0 10px;
+  letter-spacing: 0.2px;
+}
+
+.colectivo-sub {
+  max-width: 70ch;
+  margin: 0;
+  opacity: 0.92;
+  line-height: 1.65;
+}
+
+/* Bloques */
+.colectivo-bloque {
+  margin-top: 34px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px color-mix(in srgb, #000 18%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.colectivo-bloque-head {
+  margin-bottom: 18px;
+}
+
+.colectivo-bloque-head h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.colectivo-bloque-head p {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Consejo (cards grandes)
+   =============================== */
+
+.consejo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 1100px) {
+  .consejo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 880px) {
+  .consejo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .consejo-grid { grid-template-columns: 1fr; }
+}
+
+.persona-card {
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-2) 78%, transparent);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  overflow: hidden;
+}
+
+.persona-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--primary) 55%, var(--border));
+  background: color-mix(in srgb, var(--surface-2) 70%, var(--primary-weak));
+}
+
+.persona-card--big {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 14px;
+}
+
+.persona-foto {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  background: color-mix(in srgb, #000 20%, transparent);
+}
+
+.persona-foto--big {
+  width: 100%;
+  height: 240px;
+}
+
+@media (max-width: 520px) {
+  .persona-foto--big { height: 260px; }
+}
+
+.persona-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.persona-info {
+  min-width: 0;
+}
+
+.persona-nombre {
+  margin: 0 0 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.persona-rol {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.92;
+  padding: 6px 10px;
+  width: fit-content;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 22%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+/* ===============================
+   Participación (foto + lista)
+   =============================== */
+
+.participacion-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 920px) {
+  .participacion-grid { grid-template-columns: 1fr; }
+}
+
+.participacion-foto {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, #000 18%, transparent);
+  box-shadow: 0 14px 34px color-mix(in srgb, #000 18%, transparent);
+}
+
+.participacion-foto img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 920px) {
+  .participacion-foto img { height: 240px; }
+}
+
+.participacion-lista {
+  padding: 0;
+}
+
+/* ===============================
+  Participación: nombres en párrafo (compacto)
+   =============================== */
+
+.participacion-texto {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-2) 84%, transparent);
+  padding: 16px;
+}
+
+.nombres-parrafo {
+  margin: 0;
+  line-height: 1.75;
+  opacity: 0.95;
+  font-size: 15px;
+
+  /* hace que se lea más "editorial" y compacte mejor */
+  text-wrap: pretty;
+}
+
+.nombres-parrafo--compacto {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.92;
+}
+
+/* un detalle estético: resalta separadores sin romper la paleta */
+.nombres-parrafo::selection {
+  background: color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+
+
+
+@media (max-width: 560px) {
+  .nombres-lista--compacta { grid-template-columns: 1fr; }
+}
+
+/* ===============================
+  Amigos generosos (callout)
+   =============================== */
+
+.amigos {
+  margin-top: 26px;
+  border-radius: 20px;
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border));
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary) 32%, transparent),
+    color-mix(in srgb, var(--surface-2) 84%, transparent)
+  );
+  box-shadow: 0 18px 44px color-mix(in srgb, #000 22%, transparent);
+}
+
+.amigos-inner {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 840px) {
+  .amigos-inner { grid-template-columns: 1fr; }
+}
+
+.amigos h3 {
+  margin: 0 0 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+}
+
+.amigos p {
+  margin: 0;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.amigos-cta {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 840px) {
+  .amigos-cta { justify-content: flex-start; }
+}
+
+.btn-amigos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+
+  background: var(--primary);
+  color: var(--on-primary);
+  border: 1px solid color-mix(in srgb, var(--primary) 70%, #000);
+  transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease;
+}
+
+.btn-amigos:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn-amigos--ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+}
+
+.btn-amigos--ghost:hover {
+  background: color-mix(in srgb, var(--primary) 18%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 45%, transparent);
+}
