@@ -14,6 +14,9 @@
   --accent-yellow: #fff200;
   --accent-red: #ee0817;
 
+  /* ===== IMAGEN DEL HERO ===== */
+  --inicio-img: url("../img/senalando-cielo.jpeg");
+
   /* ===== Superficies para contraste (CLAVE con fondo azul) ===== */
   --surface: color-mix(in srgb, #0b0b0f 86%, var(--bg));   /* panel oscuro */
   --surface-2: color-mix(in srgb, #0b0b0f 78%, var(--bg)); /* panel un poco + claro */
@@ -188,140 +191,174 @@ body {
 
 /* =========================
   FOOTER
-========================= */
+   ========================= */
 
-.footer {
-  /* antes: mezcla con white (en fondo azul puede “lavarse”) */
-  background: var(--surface-2);
-  border-top: 1px solid var(--border);
+footer{
+  background: var(--surface-2, #0f172a);
+  border-top: 1px solid var(--border, rgba(255,255,255,.15));
   padding: 26px 22px 14px;
-}
+  color: var(--text, #fff);
 
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  /* FULL WIDTH */
+  width: 100%;
 
+  /* Layout centrado sin necesitar un div contenedor */
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 22px;
+
+  /* 2 columnas pero con ancho controlado */
+  grid-template-columns: minmax(280px, 520px) minmax(260px, 420px);
+
+  /* Centro el "bloque" de columnas dentro del footer */
+  justify-content: center;
+
+  /* Separación que se adapta: no queda pegado ni lejos */
+  column-gap: clamp(18px, 5vw, 56px);
+  row-gap: 18px;
+
   align-items: start;
 }
 
-.footer-brand {
+
+
+.logo-praxis{
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.footer-logo {
-  width: 150px;
-  height: 150px;
+.logo-praxis img{
+  width: 140px;
+  height: 140px;
   object-fit: contain;
 }
 
-.footer-brand-text {
+.footer-texto{
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
 
-.footer-title {
-  font-family: var(--font-title);
+.footer-titulo{
+  font-family: var(--font-title, "Montserrat", sans-serif);
   font-weight: 800;
-  color: var(--text);
+  font-size: 1.2rem;
+  color: inherit;
 }
 
-.footer-desc {
-  font-family: var(--font-body);
-  opacity: 0.85;
-  color: color-mix(in srgb, var(--text) 90%, transparent);
+.footer-descripcion{
+  font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.95rem;
+  opacity: .9;
 }
 
-.footer-col {
+/* Contacto */
+.footer-redes{
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.footer-heading {
+.footer-redes h3{
   margin: 0 0 6px;
-  font-family: var(--font-title);
-  font-weight: 800;
   font-size: 1rem;
-  color: var(--text);
 }
 
-.footer-link {
-  display: inline-flex;
+/* Links */
+.footer-redes a{
+  display: flex;
   align-items: center;
   gap: 10px;
 
-  font-family: var(--font-body);
   text-decoration: none;
-  color: color-mix(in srgb, var(--text) 88%, transparent);
+  color: color-mix(in srgb, var(--text, #fff) 88%, transparent);
+
   padding: 8px 10px;
   border-radius: 12px;
+  width: fit-content;
 
   transition: 160ms ease;
-  width: fit-content;
 }
 
-.footer-link:hover {
-  background: color-mix(in srgb, var(--primary) 16%, transparent);
-  color: var(--text);
+.footer-redes a img{
+  background: transparent;
+  mix-blend-mode: multiply;
 }
 
-.footer-icon {
-  width: 18px;
-  display: inline-flex;
-  justify-content: center;
+
+.footer-redes a:hover{
+  background: color-mix(in srgb, var(--primary, #0077d4) 16%, transparent);
+  color: var(--text, #fff);
 }
 
-.ig-icon {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
+
+/* Iconos */
+.footer-redes a img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex: 0 0 20px;
 }
 
-/* Esto ya te queda bien con max-width.
-   Si querés borde “full width” sí o sí, te lo cambio con un ::before */
-.footer-bottom {
-  max-width: 1200px;
-  margin: 16px auto 0;
+/* Bottom ocupa toda la fila */
+.footer-bottom{
+  grid-column: 1 / -1;
+  margin-top: 16px;
   padding-top: 14px;
-
-  border-top: 1px solid var(--border);
-  color: color-mix(in srgb, var(--text) 70%, transparent);
-
-  font-family: var(--font-body);
+  border-top: 1px solid var(--border, rgba(255,255,255,.15));
+  color: color-mix(in srgb, var(--text, #fff) 70%, transparent);
+  font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.9rem;
 }
 
+
 /* =========================
   RESPONSIVE
-========================= */
+   ========================= */
 
-@media (max-width: 768px) {
-  .titulo { font-size: 1.4rem; }
-  .brand-logo { width: 56px; height: 56px; }
-  .nav { flex-wrap: wrap; gap: 8px; }
+/* Tablets */
+@media (max-width: 900px){
+  footer{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px 18px 12px;
+  }
+
+  .logo-praxis img{
+    width: 110px;
+    height: 110px;
+  }
+
+  .footer-bottom{
+    margin-top: 8px;
+  }
 }
 
-@media (max-width: 600px) {
-  .brand { flex-wrap: wrap; text-align: center; }
-  .titulo { font-size: 1.15rem; line-height: 1.15; max-width: 22ch; margin: 0; }
-  .nav-item, .nav-cta { padding: 8px 10px; border-radius: 12px; font-size: 0.92rem; }
-  .footer { padding: 20px 14px 12px; }
-  .footer-inner { grid-template-columns: 1fr; gap: 16px; }
-}
+/* Mobile */
+@media (max-width: 600px){
+  footer{
+    padding: 18px 14px 12px;
+  }
 
-@media (max-width: 420px) {
-  .titulo { font-size: 1.05rem; max-width: 20ch; }
-  .nav-item, .nav-cta { font-size: 0.9rem; padding: 7px 9px; }
-}
+  .logo-praxis{
+    gap: 10px;
+  }
 
-@media (max-width: 860px) {
-  .footer-inner { grid-template-columns: 1fr; }
-}
+  .logo-praxis img{
+    width: 90px;
+    height: 90px;
+  }
 
+  /* links a todo el ancho para mejor tacto */
+  .footer-redes a{
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .footer-titulo{
+    font-size: 1.1rem;
+  }
+
+  .footer-descripcion{
+    font-size: 0.95rem;
+  }
+}

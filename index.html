@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="./front/img/logos/arcoiris_solo.png" type="image/x-icon">
     <title>Praxis</title>
 </head>
@@ -28,7 +30,8 @@
                     <a class="nav-item" href="./index.html">Inicio</a>
                     <div class="submenu">
                         <a class="submenu-item" href="./front/html/origen_e_itinerario.html">Origen e itinerario</a>
-                        <a class="submenu-item" href="./front/html/enfoque.html">Enfoque</a>
+                        <a class="submenu-item" href="./front/html/enfoque.html">perspectiva</a>
+                        <a class="submenu-item" href="">Proteccion Integral de infancias y juventudes</a>
                         <a class="submenu-item" href="#estatuto">Estatuto</a>
                     </div>
                 </div>
@@ -38,9 +41,7 @@
                     <a class="nav-item" href="./front/html/personas.html">Personas en el colectivo</a>
                     <div class="submenu">
                         <a class="submenu-item" href="./front/html/personas.html">Consejo de administración</a>
-                        <a class="submenu-item" href="./front/html/personas.html">Participantes activ@s</a>
                         <a class="submenu-item" href="./front/html/personas.html">Participantes honorari@s</a>
-                        <a class="submenu-item" href="./front/html/personas.html">Amig@s generos@s</a>
                     </div>
                 </div>
 
@@ -56,12 +57,12 @@
 
                 <!-- 4) Líneas de trabajo -->
                 <div class="nav-group">
-                    <a class="nav-item" href="./front/html/lineas.html">Oferta</a>
+                    <a class="nav-item" href="./front/html/oferta.html">Oferta</a>
                     <div class="submenu">
-                        <a class="submenu-item" href="./front/html/lineas.html">Asesoramiento</a>
-                        <a class="submenu-item" href="./front/html/lineas.html">Formación continua</a>
-                        <a class="submenu-item" href="./front/html/lineas.html">Proyectos educativos y sociocomunitarios</a>
-                        <a class="submenu-item" href="./front/html/lineas.html">Investigaciones</a>
+                        <a class="submenu-item" href="./front/html/oferta.html">Asesoramiento</a>
+                        <a class="submenu-item" href="./front/html/oferta.html">Formación continua</a>
+                        <a class="submenu-item" href="./front/html/oferta.html">Proyectos educativos y sociocomunitarios</a>
+                        <a class="submenu-item" href="./front/html/oferta.html">Investigaciones</a>
                     </div>
                 </div>
             </nav>
@@ -69,13 +70,14 @@
     </header>
     <main>
     <!-- HERO (primer pantallazo) -->
-        <section class="hero" style="--hero-img: url('./front/img/señalando\ al\ cielo.jpeg');">
-                <div class="hero__content">
-                    <h1 class="hero__title">
-                        Transformando problemas en desafios
-                    </h1>
-                </div>
+        <section class="inicio-principal">
+            <div class="contenido-inicio">
+                <h1>Transformando problemas en desafíos</h1>
+            </div>
+
+            <div class="overlay"></div>
         </section>
+
         <section class="inicio-bloques" aria-label="Secciones de inicio">
             <div class="container">
                 <!-- 1) Origen e itinerario -->
@@ -83,23 +85,20 @@
                     <div class="inicio-texto">
                         <h2>Origen e itinerario</h2>
                         <p>
-                        Conocé cómo nace Fundación Experiencia Praxis y el recorrido que consolidó nuestro trabajo: una trayectoria
-                        construida desde la investigación-acción, la formación docente y el diálogo con los territorios.
-                        Vas a encontrar las principales etapas, aprendizajes y líneas de acción que hoy guían los proyectos que desarrollamos.
+                        Fundación Experiencia Praxis (FEP) es una organización sin fines de lucro de reciente constitución legal (2025). Creada para institucionalizar una trayectoria de más de 20 años de trabajo sostenido por el Colectivo Praxis en desarrollo social, diseño y gestión colaborativa de proyectos educativos y socio comunitarios, que promueven la autonomía y la sostenibilidad, la investigación, la formación profesional, y la educación en situaciones de emergencia en contextos locales, nacionales e internacionales.
                         </p>
                         <a class="btn-ghost" href="./front/html/origen_e_itinerario.html">Ver más</a>
                     </div>
             
                     <div class="inicio-media">
-                        <!-- Reemplazá por tu imagen -->
-                        <img src="./front/img/equipo_cartel.jpg" alt="Imagen representativa del origen y recorrido de Praxis" />
+                        <img src="./front/img/origen-itinerario/origen-card (2).jpg" alt="Imagen representativa del origen y recorrido de Praxis" />
                     </div>
                 </article>
 
                 <!-- 2) Enfoque (invertido) -->
-                <article class="inicio-fila is-reverse">
+                <article class="inicio-fila">
                     <div class="inicio-texto">
-                        <h2>Enfoque</h2>
+                        <h2>Perspectiva</h2>
                         <p>
                         Explorá la perspectiva que orienta nuestras propuestas educativas, de investigación y de vinculacion territorial:
                         un enfoque crítico, situado y colaborativo, comprometido con la educación pública y los derechos humanos.
@@ -110,6 +109,23 @@
                     <div class="inicio-media">
                         <!-- Reemplazá por tu imagen -->
                         <img src="./front/img/praxis_equipo_completo.JPG" alt="Imagen representativa del enfoque de trabajo" />
+                    </div>
+                </article>
+
+                <!--proteccion integral de infancias y juventudes -->
+
+                <article class="inicio-fila">
+                    <div class="inicio-texto">
+                        <h2 id="estatuto">Proteccion integral de infancias y juventudes</h2>
+                        <p>
+                        La Fundación Experiencia Praxis (FEP) está comprometida con la protección integral de infancias y juventudes (IJ), como un principio ético, jurídico y operativo transversal a todas sus acciones sociales, educativas, comunitarias, artísticas y de investigación. Reconocemos a las infancias como sujetos de derecho, de acuerdo con la Convención sobre los Derechos del Niñ@ (ONU, 1989), la Ley Nacional 26.061 de Protección Integral de los Derechos de las Niñas, Niños y Adolescentes (Argentina) y demás normativas vigentes. En este sentido, la Fundación promueve acciones institucionales priorizando el bienestar físico, emocional y social de las IJ.
+                        </p>
+                        <a class="btn-ghost" href="">Ver mas</a>
+
+                    </div>
+            
+                    <div class="inicio-media">
+                        <img src="./front/img/flor.jpeg" alt="Imagen representativa del estatuto institucional" />
                     </div>
                 </article>
 
@@ -127,38 +143,41 @@
                     </div>
             
                     <div class="inicio-media">
-                        <!-- Reemplazá por tu imagen -->
                         <img src="./front/img/flor.jpeg" alt="Imagen representativa del estatuto institucional" />
                     </div>
                 </article>
             </div>
 </section>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <!-- Marca --> 
-            <div class="footer-brand">
-                <img class="footer-logo" src="./front/img/logos/PRAXIS_blanco.png" alt="Logo Praxis">
-                <div class="footer-brand-text">
-                    <span class="footer-title">Praxis</span> 
-                    <span class="footer-desc">Fundación</span> 
-                </div> 
-            </div> 
-            <!-- Contacto --> 
-            <div class="footer-col"> 
-                <h3 class="footer-heading">Contacto</h3> 
-                <a class="footer-link" href=""> 
-                    <span class="footer-icon" aria-hidden="true">✉</span> 
-                    <span>praxis.cordoba@gmail.com</span> 
-                </a> <a class="footer-link" href="https://www.instagram.com/experiencia.praxis/" target="_blank" rel="noopener noreferrer">
-                    <svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"> 
-                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.75-2.25a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z"/> </svg> <span>Instagram</span> 
-                    </a> 
-                </div> 
-            </div> 
-            <div class="footer-bottom"> 
-                <span>© Praxis. Todos los derechos reservados.</span> 
+    <footer>
+        <div class="logo-praxis">
+            <img src="./front/img/logos/PRAXIS_blanco.png" alt="logo de praxis">
+            <div class="footer-texto">
+                <span class="footer-titulo">Praxis</span>
+                <span class="footer-descripcion">Fundacion</span>
             </div>
+        </div>
+        <div class="footer-redes">
+            <h3 class="footer-titulo">Contacto</h3>
+            <a href="">
+                <img src="./front/img/iconos/mail1.png" alt="mail">
+                <span class="footer-descripcion">praxis.cordoba@gmail.com</span>
+            </a>
+
+            <a href="https://www.instagram.com/experiencia.praxis/">
+                <img src="./front/img/iconos/instagram.png" alt="Instagram">
+                <span class="footer-descripcion">Instagram</span>
+            </a>
+
+            <a href="https://www.linkedin.com/feed/">
+                <img src="./front/img/iconos/linkedin1.png" alt="linkedin">
+                <span class="footer-descripcion">LinkedIn</span>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <span>© Praxis. Todos los derechos reservados.</span>
+        </div>
     </footer>
+
 </body>
 </html>
