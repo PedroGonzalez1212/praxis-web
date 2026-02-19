@@ -1,0 +1,82 @@
+/* =========================
+  PERSPECTIVA (layout boceto)
+========================= */
+
+.perspectiva{
+  padding: clamp(44px, 6vw, 90px) 22px;
+}
+
+.perspectiva__wrap{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Título simple, sin "card" */
+.perspectiva__title{
+  margin: 0 0 18px 0;
+  font-size: clamp(1.5rem, 1.1vw + 1.2rem, 2.15rem);
+  line-height: 1.15;
+  letter-spacing: .2px;
+  color: var(--text, #e9e9ee);
+}
+
+/* Bloque de texto normal */
+.perspectiva__body{
+  color: color-mix(in srgb, var(--text, #e9e9ee) 92%, transparent);
+  font-size: clamp(1rem, .25vw + .95rem, 1.06rem);
+  line-height: 1.8;
+}
+
+/* Espaciado de párrafos */
+.perspectiva__body p{
+  margin: 0 0 14px 0;
+}
+
+
+/* ===== Logo vertical dentro del texto (como el boceto) ===== */
+.perspectiva__logoBox{
+  float: right;
+  width: min(300px, 42%);
+  margin: 8px 0 10px 22px; /* separa del texto a la izquierda */
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.perspectiva__logo{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;     /* mantiene sensación vertical */
+  object-fit: contain;
+  display: block;
+}
+
+
+/* Limpieza del float para que no “coma” el padding de abajo */
+.perspectiva__body::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* =========================
+  RESPONSIVE
+========================= */
+@media (max-width: 900px){
+  .perspectiva__logoBox{
+    width: min(220px, 45%);
+  }
+}
+
+@media (max-width: 640px){
+  /* en mobile, que NO flote: se apila y queda centrado */
+  .perspectiva__logoBox{
+    float: none;
+    width: min(260px, 80%);
+    margin: 0 auto 14px auto;
+  }
+
+  .perspectiva__title{
+    margin-bottom: 14px;
+  }
+}

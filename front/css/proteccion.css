@@ -1,0 +1,148 @@
+/* =========================
+   MAIN / POLÍTICA (FEP)
+========================= */
+
+.policy {
+  width: 100%;
+  padding: clamp(28px, 4vw, 56px) 0;
+}
+
+.policy__wrap {
+  width: min(1100px, 100% - 44px);
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(18px, 2.2vw, 28px);
+}
+
+/* Bloque superior: texto + imagen vertical */
+.policy__top {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: clamp(16px, 2vw, 24px);
+  align-items: start;
+}
+
+.policy__text {
+  display: grid;
+  gap: 12px;
+}
+
+.policy__h1 {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.policy__h2 {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.policy p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: clamp(15px, 1.1vw, 16.5px);
+  opacity: 0.92;
+}
+
+/* Cards */
+.policy__block {
+  border-radius: 18px;
+  padding: clamp(16px, 2vw, 22px);
+  background: color-mix(in srgb, var(--card, #111320) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text, #ffffff) 10%, transparent);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* Listas */
+.policy__list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.policy__list li {
+  line-height: 1.6;
+  font-size: clamp(15px, 1.1vw, 16.5px);
+  opacity: 0.92;
+}
+
+/* Medios */
+.policy__media {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--card, #111320) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text, #ffffff) 10%, transparent);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.policy__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Vertical (placeholder) */
+.policy__media--vertical {
+  aspect-ratio: 3 / 4;
+}
+
+/* Horizontal (placeholder) */
+.policy__media--horizontal {
+  aspect-ratio: 16 / 9;
+}
+
+/* Epígrafe editable */
+.policy__caption {
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.35;
+  opacity: 0.72;
+  border-top: 1px solid color-mix(in srgb, var(--text, #ffffff) 10%, transparent);
+  outline: none;
+}
+
+/* Grilla final (2 columnas) */
+.policy__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+/* =========================
+  RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .policy__top {
+    grid-template-columns: 1fr;
+  }
+
+  .policy__media--vertical {
+    aspect-ratio: 16 / 10;
+  }
+
+  .policy__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .policy__wrap {
+    width: min(1100px, 100% - 28px);
+  }
+
+  .policy__block {
+    border-radius: 16px;
+  }
+
+  .policy__media {
+    border-radius: 16px;
+  }
+}
