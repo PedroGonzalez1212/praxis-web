@@ -55,12 +55,6 @@
                 <!-- 4) Líneas de trabajo -->
                 <div class="nav-group">
                     <a class="nav-item" href="../html/oferta.html">Oferta</a>
-                    <div class="submenu">
-                        <a class="submenu-item" href="../html/oferta.html">Asesoramiento</a>
-                        <a class="submenu-item" href="../html/oferta.html">Formación continua</a>
-                        <a class="submenu-item" href="../html/oferta.html">Proyectos educativos y sociocomunitarios</a>
-                        <a class="submenu-item" href="../html/oferta.html">Investigaciones</a>
-                    </div>
                 </div>
             </nav>
         </div>
@@ -98,7 +92,7 @@
 
         <article class="persona-card persona-card--big">
           <div class="persona-foto persona-foto--big">
-            <img src="../img/fotos individuales/griselda.jpeg" alt="Griselda A. Amuchástegui" loading="lazy" />
+            <img src="../img/fotos individuales/griselda.jpg" alt="Griselda A. Amuchástegui" loading="lazy" />
           </div>
           <div class="persona-info">
             <h4 class="persona-nombre">Griselda A. Amuchástegui</h4>
@@ -128,7 +122,7 @@
 
         <article class="persona-card persona-card--big">
           <div class="persona-foto persona-foto--big">
-            <img src="../img/fotos individuales/vero.jpeg" alt="Verónica Alejandra Ainciart" loading="lazy" />
+            <img src="../img/fotos individuales/veronica.jpg" alt="Verónica Alejandra Ainciart" loading="lazy" />
           </div>
           <div class="persona-info">
             <h4 class="persona-nombre">Verónica Alejandra Ainciart</h4>
@@ -148,7 +142,7 @@
 
         <article class="persona-card persona-card--big">
           <div class="persona-foto persona-foto--big">
-            <img src="../img/fotos individuales/mariana.jpeg" alt="Mariana Judith Correa" loading="lazy" />
+            <img src="../img/fotos individuales/mariana.jpg" alt="Mariana Judith Correa" loading="lazy" />
           </div>
           <div class="persona-info">
             <h4 class="persona-nombre">Mariana Judith Correa</h4>
@@ -167,31 +161,86 @@
         </article>
       </div>
     </section>
-
-    <!-- =========================
-        Participantes honorarios
-        ========================= -->
-    <section class="colectivo-bloque" aria-labelledby="honorarios-title">
-      <div class="colectivo-bloque-head">
-        <h3 id="honorarios-title">Participantes honorari@s</h3>
-        <p>Referentes con quienes conversamos y fortalecen el camino del colectivo</p>
-      </div>
-
-      <div class="participacion-grid">
-        <figure class="participacion-foto">
-          <img
-            src="../img/flor.jpeg"
-            alt="Foto grupal de participantes honorari@s"
-            loading="lazy"
-          />
-        </figure>
-        <article class="participacion-texto">
-          <p class="nombres-parrafo nombres-parrafo--compacto">
-            Ángela Aisenstein · Pablo Sharagrodsky · Gloria Edelstein · Eduardo Bologna- Osmar Moreira de Sousa Junior · Valter Bracht · Paulo Fensterseifer · Fernando Jaime Gonzalez · Filimer Ferro- Rodolfo Rozengardt- Felipe Quintao de Almeida · Karen Gil Eusse · Anelise Ribetto · Rosa Malena Carvalho · Ricardo de Sosa Carvalho · Dora Vai -Norma Beatriz Rodriguez. Ueberson Riveiro · Ileana Wenetz - Leonardo Gómez · José Ângelo Gariglio · Admir Almeida Junior · Claudio Marcio Oliveira · Luciana Marcassa · Alejandro Añasco · Gloria Campomar · Ana Torrón · Cecilia Ruegger- Ramiro Lascano- María Isabel del Valle -  Miguel Angel Herrera Pavo · Roberto Starhinger · Víctor Pavía · Gabriela Baione · Piero Julián Ronconi · María Fuentecilla · Gogo Sardou · Felisa Garlaschelli · Virginia Bossio. Gabriela lamelas. Maria Isabel Trybalski Eichholz· Robson Borges ·  Gustavo Rolando Coppola · Carola Tejeda· Lilia Nakayama - Monica Garro · Mónica Irene Gale· Marcela Cena- Mirtha Fassina- Josefina Yafar
+    <section class="colectivo-bloque participantesBloque" aria-labelledby="participantes-title">
+      <header class="colectivo-bloque-head participantesBloque__head">
+        <h3 id="consejo-title">Participantes del colectivo</h3>
+      </header>
+      <div class="participantesBloque__grid">
+        <!-- Nombres -->
+        <article class="participantesBloque__nombres" aria-label="Listado de participantes">
+          <p class="participantesBloque__lista">
+            Ana Valeria Hongn · Andrea Napoli · Ariel Berrondo · Ayelén Bruno · Camil Erro Burg ·
+            Daniel Martinez · Fabian Scarponi · Gastón Achaval · Helena Britos · Jeannette Ximena Fernandez ·
+            Joaquin Romero · Lourdes Figueroa · María Belén Galarraga · Marcela Cena · María Ignacia Kamienski ·
+            María Isabel Leonardo · María Josefina Yafar · Matías Acosta · Mirtha Fassina · Moira Ludueña Geraghty ·
+            Paulina Aranda · Salvador Guzman · Sergio Ciaburri · Silvina Forniz · Soledad Arias · Valeria Bruno ·
+            Yamila Nadir Airut · Yamila Torres  · Micaela Rossi  · Agostina Vitta
+          </p>
         </article>
+    
+        <!-- Imágenes -->
+        <figure class="participantesBloque__galeria" aria-label="Galería de imágenes del colectivo">
+          <div class="participantesBloque__imgRow">
+            <div class="participantesBloque__img">
+              <img src="../img/personas colect/participantes-item1.jpg" alt="Imagen del colectivo 1" loading="lazy">
+            </div>
+    
+            <div class="participantesBloque__img">
+              <img src="../img/personas colect/participantes-item2.jpg" alt="Imagen del colectivo 2" loading="lazy">
+            </div>
+          </div>
+        </figure>
       </div>
     </section>
-
+    <section class="colectivo-bloque honorariosBloque" aria-labelledby="honorarios-title">
+      <header class="colectivo-bloque-head honorariosBloque__head">
+        <h3 id="honorarios-title">Participantes honorari@s</h3>
+      </header>
+    
+      <div class="honorariosBloque__grid">
+    
+        <!-- TEXTO + LISTA -->
+        <article class="honorariosBloque__texto" aria-label="Texto de reconocimiento y listado de honorarios">
+          <p class="honorariosBloque__intro">
+            Reconocemos en estas líneas a nuestros compañer@s de diálogo, presencias esenciales que han fortalecido
+            el camino de Praxis. Gracias por la generosidad y por el pensar compartido:
+          </p>
+    
+          <p class="honorariosBloque__lista">
+            Gloria Edelstein · Víctor Pavía · María Fuentecilla · Paulo Evaldo Fensterseifer · Anelise Ribetto ·
+            Roberto Starhinger · Osmar Moreira de Souza Junior · Gogo Sardou · Filimer Ferro · Virginia Bossio ·
+            Karen Gil Eusse · Rodolfo Rozengardt · Ileana Wenetz · Fernando Jaime Gonzalez · Lilia Nakayama ·
+            Pablo Sharagrodsky · Norma Beatriz Rodriguez · Ricardo de Souza Carvalho · Ángela Aisenstein ·
+            Gustavo Rolando Coppola · Ana Torrón · Miguel Angel Herrera Pavo · Carola Tejeda · Leonardo Pérez ·
+            Monica Garro · Mónica Irene Gale · Felipe Quintao de Almeida · Dora Elisa Vai · Ueberson Riveiro ·
+            Cecilia Ruegger · Leonardo Gómez · Gloria Campomar · José Ângelo Gariglio · Alejandra Ordoñez ·
+            Admir Almeida Junior · Gabriela Baione · Claudio Marcio Oliveira · Alejandro Añasco · María Isabel del Valle ·
+            Ramiro Lascano · Felisa Garlaschelli · Piero Julián Ronconi · Gabriela Gómez · Gabriela Lamelas ·
+            Maria Isabel Trybalski Eichholz · Robson Machado Borges · Eduardo Bologna · Yajaira Terán Revelo ·
+            María Veronica Cajal · Noemí Duran Salvadó · Patricia Gomez · Ernesto Gustavo Mafla Castillo · Claudia Roca ·
+            Teodoro Contreras · Fabio Krivzov.
+          </p>
+    
+          <p class="honorariosBloque__cierre">
+            Celebramos con ell@s, y con todas las personas con quienes hemos aprendido, intercambiado y crecido en cada
+            investigación, taller, proyecto e iniciativas compartidas desde Praxis en Argentina, Brasil, Chile, Colombia,
+            Ecuador, México, Uruguay y en otras tierras más remotas y lejanas. Nuestro agradecimiento profundo por habitar
+            este camino junto a nosotros.
+          </p>
+        </article>
+        <!-- IMÁGENES -->
+        <figure class="honorariosBloque__galeria" aria-label="Imágenes de participantes honorari@s">
+          <div class="honorariosBloque__imgRow">
+            <div class="honorariosBloque__img">
+              <img src="../img/personas colect/honorarios-item1.jpg" alt="Imagen relacionada a Praxis 1" loading="lazy">
+            </div>
+            <div class="honorariosBloque__img">
+              <img src="../img/personas colect/honorarios-item2.png" alt="Imagen relacionada a Praxis 2" loading="lazy">
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
     <!-- =========================
         Amigos generosos
         ========================= -->

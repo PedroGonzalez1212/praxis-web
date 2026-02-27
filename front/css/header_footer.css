@@ -18,7 +18,7 @@
   --inicio-img: url("../img/senalando-cielo.jpeg");
 
   /* ===== Superficies para contraste (CLAVE con fondo azul) ===== */
-  --surface: color-mix(in srgb, #0b0b0f 86%, var(--bg));   /* panel oscuro */
+  --surface: #23496C;   /* panel oscuro */
   --surface-2: color-mix(in srgb, #0b0b0f 78%, var(--bg)); /* panel un poco + claro */
   --border: color-mix(in srgb, var(--text) 18%, transparent);
 
@@ -58,8 +58,7 @@ body {
   gap: 18px;
   padding: 14px 22px;
 
-  /* antes: background: var(--bg);  (se perdía) */
-  background: color-mix(in srgb, var(--surface) 86%, transparent);
+  background: var(--surface);
   border-bottom: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
   backdrop-filter: blur(10px);
 
@@ -189,29 +188,21 @@ body {
 }
 
 
+
 /* =========================
   FOOTER
    ========================= */
 
 footer{
-  background: var(--surface-2, #0f172a);
+  background: var(--surface);
   border-top: 1px solid var(--border, rgba(255,255,255,.15));
   padding: 26px 22px 14px;
   color: var(--text, #fff);
-
-  /* FULL WIDTH */
   width: 100%;
-
-  /* Layout centrado sin necesitar un div contenedor */
   display: grid;
-
-  /* 2 columnas pero con ancho controlado */
   grid-template-columns: minmax(280px, 520px) minmax(260px, 420px);
-
-  /* Centro el "bloque" de columnas dentro del footer */
   justify-content: center;
 
-  /* Separación que se adapta: no queda pegado ni lejos */
   column-gap: clamp(18px, 5vw, 56px);
   row-gap: 18px;
 

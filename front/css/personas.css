@@ -1,5 +1,5 @@
 /* ===============================
-   PERSONAS EN EL COLECTIVO
+  PERSONAS EN EL COLECTIVO
    =============================== */
 
 .colectivo {
@@ -31,35 +31,8 @@
   line-height: 1.65;
 }
 
-/* Bloques */
-.colectivo-bloque {
-  margin-top: 34px;
-  padding: 22px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface) 70%, transparent);
-  border-radius: 18px;
-  box-shadow: 0 14px 34px color-mix(in srgb, #000 18%, transparent);
-  backdrop-filter: blur(8px);
-}
-
-.colectivo-bloque-head {
-  margin-bottom: 18px;
-}
-
-.colectivo-bloque-head h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  margin: 0 0 6px;
-}
-
-.colectivo-bloque-head p {
-  margin: 0;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
 /* ===============================
-   Consejo (cards grandes)
+  Consejo (cards grandes)
    =============================== */
 
 .consejo-grid {
@@ -142,84 +115,6 @@
   border-radius: 999px;
   background: color-mix(in srgb, var(--primary) 22%, transparent);
   border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
-}
-
-/* ===============================
-   Participación (foto + lista)
-   =============================== */
-
-.participacion-grid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 16px;
-  align-items: start;
-}
-
-@media (max-width: 920px) {
-  .participacion-grid { grid-template-columns: 1fr; }
-}
-
-.participacion-foto {
-  margin: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, #000 18%, transparent);
-  box-shadow: 0 14px 34px color-mix(in srgb, #000 18%, transparent);
-}
-
-.participacion-foto img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 920px) {
-  .participacion-foto img { height: 240px; }
-}
-
-.participacion-lista {
-  padding: 0;
-}
-
-/* ===============================
-  Participación: nombres en párrafo (compacto)
-   =============================== */
-
-.participacion-texto {
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface-2) 84%, transparent);
-  padding: 16px;
-}
-
-.nombres-parrafo {
-  margin: 0;
-  line-height: 1.75;
-  opacity: 0.95;
-  font-size: 15px;
-
-  /* hace que se lea más "editorial" y compacte mejor */
-  text-wrap: pretty;
-}
-
-.nombres-parrafo--compacto {
-  font-size: 14px;
-  line-height: 1.8;
-  opacity: 0.92;
-}
-
-/* un detalle estético: resalta separadores sin romper la paleta */
-.nombres-parrafo::selection {
-  background: color-mix(in srgb, var(--primary) 35%, transparent);
-}
-
-
-
-
-@media (max-width: 560px) {
-  .nombres-lista--compacta { grid-template-columns: 1fr; }
 }
 
 /* ===============================
@@ -306,3 +201,223 @@
   background: color-mix(in srgb, var(--primary) 18%, transparent);
   border-color: color-mix(in srgb, var(--primary) 45%, transparent);
 }
+
+/* ===============================
+  Participantes del colectivo
+  (bloque + nombres + 3 imágenes)
+   =============================== */
+
+.participantesBloque {
+  /* usa el look de .colectivo-bloque, esto solo ajusta detalles */
+  padding: 22px;
+}
+
+.participantesBloque__head p {
+  max-width: 75ch;
+}
+
+/* Layout principal */
+.participantesBloque__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+  margin-top: 14px;
+}
+
+@media (max-width: 920px) {
+  .participantesBloque__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Caja de nombres */
+.participantesBloque__nombres {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-2) 84%, transparent);
+  padding: 16px;
+  box-shadow: 0 12px 30px color-mix(in srgb, #000 16%, transparent);
+}
+
+.participantesBloque__lista {
+  margin: 0;
+  line-height: 1.8;
+  opacity: 0.95;
+  font-size: 15px;
+  text-wrap: pretty;
+}
+
+@media (max-width: 520px) {
+  .participantesBloque__lista {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+}
+
+/* Selección acorde paleta */
+.participantesBloque__lista::selection {
+  background: color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+/* Galería */
+.participantesBloque__galeria {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, #000 14%, transparent);
+  box-shadow: 0 14px 34px color-mix(in srgb, #000 18%, transparent);
+  padding: 12px;
+}
+
+.participantesBloque__imgRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px; /* un poco más de aire */
+}
+
+/* En mobile, que bajen bien */
+@media (max-width: 640px) {
+  .participantesBloque__imgRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.participantesBloque__img {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  background: color-mix(in srgb, #000 20%, transparent);
+  aspect-ratio: 4 / 3;
+}
+
+.participantesBloque__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+/* Hover suave, sin agrandar el contenedor */
+.participantesBloque__img:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.03);
+}
+
+/* ===============================
+  Participantes honorari@s
+  (2 imágenes + texto largo)
+   =============================== */
+
+.honorariosBloque {
+  padding: 22px;
+}
+
+.honorariosBloque__head p {
+  max-width: 75ch;
+}
+
+/* Layout: imágenes arriba, texto abajo */
+.honorariosBloque__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+/* Galería */
+.honorariosBloque__galeria {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, #000 14%, transparent);
+  box-shadow: 0 14px 34px color-mix(in srgb, #000 18%, transparent);
+  padding: 12px;
+}
+
+.honorariosBloque__imgRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .honorariosBloque__imgRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.honorariosBloque__img {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  background: color-mix(in srgb, #000 20%, transparent);
+  aspect-ratio: 3 / 2; /* grandes y horizontales */
+}
+
+.honorariosBloque__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.honorariosBloque__img:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.03);
+}
+
+.honorariosBloque__caption {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* Texto */
+.honorariosBloque__texto {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-2) 84%, transparent);
+  padding: 16px;
+  box-shadow: 0 12px 30px color-mix(in srgb, #000 16%, transparent);
+}
+
+.honorariosBloque__intro,
+.honorariosBloque__cierre {
+  margin: 0 0 12px;
+  line-height: 1.75;
+  opacity: 0.95;
+  text-wrap: pretty;
+}
+
+.honorariosBloque__cierre {
+  margin: 14px 0 0;
+  opacity: 0.92;
+}
+
+/* Lista “editorial” compacta */
+.honorariosBloque__lista {
+  margin: 0;
+  line-height: 1.85;
+  opacity: 0.95;
+  font-size: 15px;
+  text-wrap: pretty;
+}
+
+@media (max-width: 520px) {
+  .honorariosBloque__lista {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+}
+
+/* Selección acorde paleta */
+.honorariosBloque__texto ::selection {
+  background: color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
