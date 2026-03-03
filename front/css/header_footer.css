@@ -15,7 +15,7 @@
   --accent-red: #ee0817;
 
   /* ===== IMAGEN DEL HERO ===== */
-  --inicio-img: url("../img/senalando-cielo.jpeg");
+  --inicio-img: url("../img/hero.png");
 
   /* ===== Superficies para contraste (CLAVE con fondo azul) ===== */
   --surface: #23496C;   /* panel oscuro */

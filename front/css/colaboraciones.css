@@ -1,5 +1,5 @@
 .collabs {
-  padding: 3.5rem 0 4.5rem;
+  padding: clamp(40px, 6vw, 80px) clamp(18px, 6vw, 90px);
   font-family: var(--font-body);
   color: var(--text);
 }
@@ -14,18 +14,15 @@
 }
 
 .collabs__title {
-  margin: 0 0 1rem;
-  font-family: var(--font-title);
-  font-size: clamp(2rem, 2.5vw, 2.75rem);
-  color: var(--text);
+  font-size: xx-large;
 }
 
 .collabs__intro {
-  margin: 0;
-  max-width: 75ch;
-  font-size: 1.05rem;
+  font-size: clamp(0.98rem, 0.3vw + 0.95rem, 1.08rem);
   line-height: 1.75;
-  color: color-mix(in srgb, var(--text) 85%, transparent);
+  margin: 0 0 22px 0;
+  text-align: justify;
+  color: var(--text);
 }
 
 .collabs__grid {
@@ -70,6 +67,7 @@
 }
 
 .collabCard__text {
+  text-align: justify;
   max-height: 0;
   margin: 0;
   padding-bottom: 10px;
@@ -79,6 +77,13 @@
   transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.25s ease, transform 0.25s ease;
   line-height: 1.6;
   color: color-mix(in srgb, var(--text) 82%, transparent);
+  hyphens: auto;
+}
+
+p{
+  color: color-mix(in srgb, var(--text) 82%, transparent);
+  text-align: justify;
+  hyphens: auto;
 }
 
 .collabCard:hover .collabCard__text,

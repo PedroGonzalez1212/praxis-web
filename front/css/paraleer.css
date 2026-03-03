@@ -1,10 +1,10 @@
 /* =========================
-   PRAXIS PARA LEER
+  PRAXIS PARA LEER
 ========================= */
 
 .read{
   width: 100%;
-  padding: clamp(18px, 3vw, 36px) 0;
+  padding: clamp(40px, 6vw, 80px) clamp(18px, 6vw, 90px);
 }
 
 .read__wrap{
@@ -18,16 +18,17 @@
 
 .read__title{
   margin: 0 0 10px;
-  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-size: xx-large;
   letter-spacing: .2px;
   color: var(--text);
 }
 
 .read__intro{
-  margin: 0;
-  line-height: 1.6;
-  color: color-mix(in srgb, var(--text) 85%, transparent);
-  max-width: 75ch;
+  font-size: clamp(0.98rem, 0.3vw + 0.95rem, 1.08rem);
+  line-height: 1.75;
+  margin: 0 0 22px 0;
+  text-align: justify;
+  color: var(--text);
 }
 
 .read__meta{

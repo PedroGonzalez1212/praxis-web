@@ -19,7 +19,7 @@
 
 .colectivo-head h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(28px, 3.2vw, 40px);
+  font-size: xx-large;
   margin: 0 0 10px;
   letter-spacing: 0.2px;
 }
@@ -31,9 +31,21 @@
   line-height: 1.65;
 }
 
+.colectivo p{
+  font-size: clamp(0.98rem, 0.3vw + 0.95rem, 1.08rem);
+  line-height: 1.75;
+  margin: 0 0 22px 0;
+  text-align: justify;
+  color: var(--text);
+}
+
 /* ===============================
   Consejo (cards grandes)
    =============================== */
+
+#consejo-title{
+  font-size: x-large;
+}
 
 .consejo-grid {
   display: grid;

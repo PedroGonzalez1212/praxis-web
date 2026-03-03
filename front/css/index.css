@@ -111,6 +111,7 @@
   color: color-mix(in srgb, var(--text) 86%, transparent);
   line-height: 1.7;
   font-size: 1rem;
+  text-align: justify;
 }
 
 /* Botón suave (tipo “ghost”) */

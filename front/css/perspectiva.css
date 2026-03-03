@@ -3,7 +3,7 @@
 ========================= */
 
 .perspectiva{
-  padding: clamp(44px, 6vw, 90px) 22px;
+  padding: clamp(40px, 6vw, 80px) clamp(18px, 6vw, 90px);
 }
 
 .perspectiva__wrap{
@@ -14,7 +14,7 @@
 /* Título simple, sin "card" */
 .perspectiva__title{
   margin: 0 0 18px 0;
-  font-size: clamp(1.5rem, 1.1vw + 1.2rem, 2.15rem);
+  font-size: xx-large;
   line-height: 1.15;
   letter-spacing: .2px;
   color: var(--text, #e9e9ee);
@@ -22,9 +22,10 @@
 
 /* Bloque de texto normal */
 .perspectiva__body{
-  color: color-mix(in srgb, var(--text, #e9e9ee) 92%, transparent);
-  font-size: clamp(1rem, .25vw + .95rem, 1.06rem);
-  line-height: 1.8;
+  color: var(--text);
+  font-size: clamp(0.98rem, 0.3vw + 0.95rem, 1.08rem);
+  line-height: 1.75;
+  text-align: justify;
 }
 
 /* Espaciado de párrafos */

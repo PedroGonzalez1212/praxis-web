@@ -1,10 +1,10 @@
 /* =========================
-   MAIN / POLÍTICA (FEP)
+  MAIN / POLÍTICA (FEP)
 ========================= */
 
 .policy {
   width: 100%;
-  padding: clamp(28px, 4vw, 56px) 0;
+  padding: clamp(40px, 6vw, 80px) clamp(18px, 6vw, 90px);
 }
 
 .policy__wrap {
@@ -29,7 +29,7 @@
 
 .policy__h1 {
   margin: 0;
-  font-size: clamp(26px, 3vw, 40px);
+  font-size: xx-large;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -42,10 +42,11 @@
 }
 
 .policy p {
-  margin: 0;
-  line-height: 1.7;
-  font-size: clamp(15px, 1.1vw, 16.5px);
-  opacity: 0.92;
+  margin: 0 0 22px 0;
+  line-height: 1.75;
+  font-size: clamp(0.98rem, 0.3vw + 0.95rem, 1.08rem);
+  color: var(--text);
+  text-align: justify;
 }
 
 /* Cards */
