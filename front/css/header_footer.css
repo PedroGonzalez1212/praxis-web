@@ -115,7 +115,7 @@ body {
   white-space: nowrap;
 }
 
-.nav-group:hover > .nav-item {
+.nav-group:hover > .nav-item, .nav-group:focus-within > .nav-item {
   background: color-mix(in srgb, var(--text) 12%, transparent);
   color: var(--text);
 }
@@ -158,7 +158,7 @@ body {
   border-top: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
 }
 
-.nav-group:hover > .submenu {
+.nav-group:hover > .submenu, .nav-group:focus-within > .submenu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -181,7 +181,7 @@ body {
   transition: background 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.submenu-item:hover {
+.submenu-item:hover, .submenu-item:focus-visible {
   background: color-mix(in srgb, var(--primary) 18%, transparent);
   color: var(--text);
   transform: translateX(2px);
