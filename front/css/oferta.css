@@ -112,6 +112,16 @@
   text-align: justify;
 }
 
+.ofertaCard a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ofertaCard__content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 /* ===== DESTACADO ===== */
 
