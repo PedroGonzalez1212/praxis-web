@@ -299,13 +299,6 @@ footer{
   color: color-mix(in srgb, var(--text, #fff) 70%, transparent);
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.9rem;
-<<<<<<< HEAD
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-=======
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -320,7 +313,6 @@ footer{
   align-items: flex-end;
   text-align: right;
   gap: 2px;
->>>>>>> 67c97e27923ef776610421bdd3a3f95562c248e0
 }
 
 
