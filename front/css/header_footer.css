@@ -299,10 +299,28 @@ footer{
   color: color-mix(in srgb, var(--text, #fff) 70%, transparent);
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.9rem;
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
+=======
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Datos legales, alineados a la derecha de la fila de derechos reservados */
+.footer-legal{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 2px;
+>>>>>>> 67c97e27923ef776610421bdd3a3f95562c248e0
 }
 
 
@@ -428,5 +446,15 @@ footer{
 
   .footer-descripcion{
     font-size: 0.95rem;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-legal{
+    align-items: flex-start;
+    text-align: left;
   }
 }
